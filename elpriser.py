@@ -144,4 +144,4 @@ with open(svg_out, "wb") as o:
 os.system("inkscape -w 800 -h 480 " + os.path.join(screendir, filename_out + '.svg') + " --export-area-page --export-background-opacity=1 --export-filename " + os.path.join(screendir, filename_out + '.png'))
 
 # Prepare a 1-bit flipped and rotated bitmap for ESP8266
-os.system("convert " + os.path.join(screendir, filename_out + '.png') + " -flip -rotate 180 -threshold 55% -monochrome " + os.path.join(screendir, filename_out + '.bmp'))
+os.system("convert " + os.path.join(screendir, filename_out + '.png') + " -flop -rotate 180 -threshold 55% -monochrome " + os.path.join(screendir, filename_out + '.bmp'))
